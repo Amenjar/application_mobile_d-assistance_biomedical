@@ -1,0 +1,10 @@
+const rendezVouscontroleur=require('../controlleurs/rendez_vouscontrolor')
+const express =require ('express')
+const route=express.Router()
+route.post('/create',rendezVouscontroleur.create)
+route.get('/getall',rendezVouscontroleur.getall)
+route.get('/getbyid/:id',rendezVouscontroleur.getbyid)
+route.get('/getbydate',rendezVouscontroleur.getbydate)
+route.put('/update/:id',rendezVouscontroleur.update)
+route.delete('/delete/:id',rendezVouscontroleur.delete)
+module.exports=route

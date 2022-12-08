@@ -1,0 +1,10 @@
+const medecincontroleur = require("../controlleurs/medecincontrolor");
+const express = require("express");
+const route = express.Router();
+route.post("/register", medecincontroleur.register);
+route.get("/getall", medecincontroleur.getall);
+route.get("/getNb", medecincontroleur.getNb);
+route.get("/getbyid/:id", medecincontroleur.getbyid);
+route.put("/update/:id", medecincontroleur.update);
+route.delete("/delete/:id", medecincontroleur.delete);
+module.exports = route;

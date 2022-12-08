@@ -1,0 +1,10 @@
+const responImageriecontroleur = require("../controlleurs/respon-imageriecontrolor");
+const express = require("express");
+const route = express.Router();
+route.post("/register", responImageriecontroleur.register);
+route.get("/getall", responImageriecontroleur.getall);
+route.get("/getNb", responImageriecontroleur.getNb);
+route.get("/getbyid/:id", responImageriecontroleur.getbyid);
+route.put("/update/:id", responImageriecontroleur.update);
+route.delete("/delete/:id", responImageriecontroleur.delete);
+module.exports = route;

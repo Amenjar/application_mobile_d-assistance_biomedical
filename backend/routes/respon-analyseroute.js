@@ -1,0 +1,10 @@
+const responAnalysecontroleur = require("../controlleurs/respon-analysecontrolor");
+const express = require("express");
+const route = express.Router();
+route.post("/register", responAnalysecontroleur.register);
+route.get("/getall", responAnalysecontroleur.getall);
+route.get("/getNb", responAnalysecontroleur.getNb);
+route.get("/getbyid/:id", responAnalysecontroleur.getbyid);
+route.put("/update/:id", responAnalysecontroleur.update);
+route.delete("/delete/:id", responAnalysecontroleur.delete);
+module.exports = route;

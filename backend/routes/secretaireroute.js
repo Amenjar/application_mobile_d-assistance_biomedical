@@ -1,0 +1,10 @@
+const secretairecontroleur = require("../controlleurs/secretairecontrolor");
+const express = require("express");
+const route = express.Router();
+route.post("/register", secretairecontroleur.register);
+route.get("/getall", secretairecontroleur.getall);
+route.get("/getNb", secretairecontroleur.getNb);
+route.get("/getbyid/:id", secretairecontroleur.getbyid);
+route.put("/update/:id", secretairecontroleur.update);
+route.delete("/delete/:id", secretairecontroleur.delete);
+module.exports = route;

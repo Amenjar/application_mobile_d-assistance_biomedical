@@ -1,0 +1,10 @@
+const patientcontroleur = require("../controlleurs/patientcontrolor");
+const express = require("express");
+const route = express.Router();
+route.post("/register", patientcontroleur.register);
+route.get("/getall", patientcontroleur.getall);
+route.get("/getNb", patientcontroleur.getNb);
+route.get("/getbyid/:id", patientcontroleur.getbyid);
+route.put("/update/:id", patientcontroleur.update);
+route.delete("/delete/:id", patientcontroleur.delete);
+module.exports = route;
